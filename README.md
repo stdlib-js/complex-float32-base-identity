@@ -58,32 +58,14 @@ for all `z`.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/complex-float32-base-identity
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var cidentityf = require( '@stdlib/complex-float32-base-identity' );
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@deno/mod.js';
 ```
 
 #### cidentityf( z )
@@ -91,9 +73,9 @@ var cidentityf = require( '@stdlib/complex-float32-base-identity' );
 Evaluates the [identity function][identity-function] for a single-precision [complex][@stdlib/complex/float32/ctor] floating-point number.
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var real = require( '@stdlib/complex-float32-real' );
-var imag = require( '@stdlib/complex-float32-imag' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
+import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-real@deno/mod.js';
+import imag from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-imag@deno/mod.js';
 
 var v = cidentityf( new Complex64( -1.0, 2.0 ) );
 // returns <Complex64>
@@ -116,9 +98,9 @@ var im = imag( v );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var cidentityf = require( '@stdlib/complex-float32-base-identity' );
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@deno/mod.js';
 
 var z;
 var i;
@@ -134,113 +116,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/complex/float32/base/identity.h"
-```
-
-#### stdlib_base_complex64_identity( z )
-
-Evaluates the identity function for a single-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float32/ctor.h"
-#include "stdlib/complex/float32/real.h"
-#include "stdlib/complex/float32/imag.h"
-
-stdlib_complex64_t z = stdlib_complex64( 2.0f, 2.0f );
-stdlib_complex64_t out = stdlib_base_complex64_identity( z );
-
-float re = stdlib_complex64_real( out );
-// returns 2.0f
-
-float im = stdlib_complex64_imag( out );
-// returns 2.0f
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex64_t` input value.
-
-```c
-stdlib_complex64_t stdlib_base_complex64_identity( const stdlib_complex64_t z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/complex/float32/base/identity.h"
-#include "stdlib/complex/float32/ctor.h"
-#include "stdlib/complex/float32/reim.h"
-#include <stdio.h>
-
-int main( void ) {
-    const stdlib_complex64_t x[] = {
-        stdlib_complex64( 3.14f, 1.0f ),
-        stdlib_complex64( -3.14f, -1.0f ),
-        stdlib_complex64( 0.0f, 0.0f ),
-        stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
-    };
-
-    stdlib_complex64_t v;
-    stdlib_complex64_t y;
-    float re1;
-    float im1;
-    float re2;
-    float im2;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        v = x[ i ];
-        y = stdlib_base_complex64_identity( v );
-        stdlib_complex64_reim( v, &re1, &im1 );
-        stdlib_complex64_reim( y, &re2, &im2 );
-        printf( "cidentity(%f + %fi) = %f + %fi\n", re1, im1, re2, im2 );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -266,7 +142,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -331,13 +207,13 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [identity-function]: https://en.wikipedia.org/wiki/Identity_function
 
-[@stdlib/complex/float32/ctor]: https://github.com/stdlib-js/complex-float32-ctor
+[@stdlib/complex/float32/ctor]: https://github.com/stdlib-js/complex-float32-ctor/tree/deno
 
 <!-- <related-links> -->
 
-[@stdlib/complex/float64/base/identity]: https://github.com/stdlib-js/complex-float64-base-identity
+[@stdlib/complex/float64/base/identity]: https://github.com/stdlib-js/complex-float64-base-identity/tree/deno
 
-[@stdlib/number/float32/base/identity]: https://github.com/stdlib-js/number-float32-base-identity
+[@stdlib/number/float32/base/identity]: https://github.com/stdlib-js/number-float32-base-identity/tree/deno
 
 <!-- </related-links> -->
 
