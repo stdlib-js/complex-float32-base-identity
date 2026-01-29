@@ -65,6 +65,11 @@ for all `z`.
 ## Usage
 
 ```javascript
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/complex-float32-base-identity/tags). For example,
+
+```javascript
 import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-esm/index.mjs';
 ```
 
@@ -97,7 +102,7 @@ var v = cidentityf( new Complex64( -1.0, 2.0 ) );
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
-import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-esm/index.mjs';
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@esm/index.mjs';
 
 var z;
 var i;
