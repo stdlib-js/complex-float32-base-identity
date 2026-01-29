@@ -67,6 +67,11 @@ for all `z`.
 To use in Observable,
 
 ```javascript
+cidentityf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/complex-float32-base-identity/tags). For example,
+
+```javascript
 cidentityf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-umd/browser.js' )
 ```
 
@@ -79,7 +84,7 @@ var cidentityf = require( 'path/to/vendor/umd/complex-float32-base-identity/inde
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -119,7 +124,7 @@ var v = cidentityf( new Complex64( -1.0, 2.0 ) );
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
