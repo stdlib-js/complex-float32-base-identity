@@ -65,7 +65,7 @@ for all `z`.
 ## Usage
 
 ```javascript
-import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@deno/mod.js';
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-deno/mod.js';
 ```
 
 #### cidentityf( z )
@@ -92,7 +92,7 @@ var v = cidentityf( new Complex64( -1.0, 2.0 ) );
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
-import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@deno/mod.js';
+import cidentityf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-base-identity@v0.1.0-deno/mod.js';
 
 var z;
 var i;
